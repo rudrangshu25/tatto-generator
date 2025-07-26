@@ -3,3 +3,7 @@ requests
 Pillow
 python-dotenv
 spacy
+keybert
+sentence-transformers
+transformers
+scikit-learn
