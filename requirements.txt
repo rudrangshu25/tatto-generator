@@ -2,3 +2,4 @@ streamlit
 requests
 Pillow
 python-dotenv
+spacy
