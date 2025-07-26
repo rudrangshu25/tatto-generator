@@ -1,10 +1,17 @@
 import spacy
 from keybert import KeyBERT
+import subprocess
+import importlib.util
 
+# Ensure spaCy model is available
+model_name = "en_core_web_sm"
+try:
+    nlp = spacy.load(model_name)
+except OSError:
+    subprocess.run(["python", "-m", "spacy", "download", model_name])
+    nlp = spacy.load(model_name)
 
-nlp = spacy.load("en_core_web_sm")
 kw_model = KeyBERT()
-
 
 symbol_map = {
     "sailor": "anchor",
